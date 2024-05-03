@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Orange_Beauty.Data;
 
@@ -11,9 +12,11 @@ using Orange_Beauty.Data;
 namespace Orange_Beauty.Migrations
 {
     [DbContext(typeof(Orange_BeautyContext))]
-    partial class Orange_BeautyContextModelSnapshot : ModelSnapshot
+    [Migration("20240503012543_createprodutoes")]
+    partial class createprodutoes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,23 +24,6 @@ namespace Orange_Beauty.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("Orange_Beauty.Models.Categoria", b =>
-                {
-                    b.Property<int>("CategoriaID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoriaID"));
-
-                    b.Property<string>("NomeCategoria")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CategoriaID");
-
-                    b.ToTable("Categoria");
-                });
 
             modelBuilder.Entity("Orange_Beauty.Models.Cliente", b =>
                 {
@@ -158,23 +144,6 @@ namespace Orange_Beauty.Migrations
                     b.ToTable("Funcionario");
                 });
 
-            modelBuilder.Entity("Orange_Beauty.Models.NivelAcesso", b =>
-                {
-                    b.Property<int>("NivelAcessoID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NivelAcessoID"));
-
-                    b.Property<string>("NomeNivelAcesso")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("NivelAcessoID");
-
-                    b.ToTable("NivelAcesso");
-                });
-
             modelBuilder.Entity("Orange_Beauty.Models.Produto", b =>
                 {
                     b.Property<int>("ProdutoID")
@@ -203,54 +172,6 @@ namespace Orange_Beauty.Migrations
                     b.HasKey("ProdutoID");
 
                     b.ToTable("Produto");
-                });
-
-            modelBuilder.Entity("Orange_Beauty.Models.Status", b =>
-                {
-                    b.Property<int>("StatusID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StatusID"));
-
-                    b.Property<string>("NomeStatus")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("StatusID");
-
-                    b.ToTable("Status");
-                });
-
-            modelBuilder.Entity("Orange_Beauty.Models.Venda", b =>
-                {
-                    b.Property<int>("VendaID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VendaID"));
-
-                    b.Property<int>("ClienteID")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("DataVenda")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DescricaoProd")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("FuncionarioID")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("PrecoProd")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("ProdutoID")
-                        .HasColumnType("int");
-
-                    b.HasKey("VendaID");
-
-                    b.ToTable("Venda");
                 });
 #pragma warning restore 612, 618
         }

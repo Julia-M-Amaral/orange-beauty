@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Orange_Beauty.Data;
 
@@ -11,9 +12,11 @@ using Orange_Beauty.Data;
 namespace Orange_Beauty.Migrations
 {
     [DbContext(typeof(Orange_BeautyContext))]
-    partial class Orange_BeautyContextModelSnapshot : ModelSnapshot
+    [Migration("20240503013213_createcategorias")]
+    partial class createcategorias
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -220,37 +223,6 @@ namespace Orange_Beauty.Migrations
                     b.HasKey("StatusID");
 
                     b.ToTable("Status");
-                });
-
-            modelBuilder.Entity("Orange_Beauty.Models.Venda", b =>
-                {
-                    b.Property<int>("VendaID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VendaID"));
-
-                    b.Property<int>("ClienteID")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("DataVenda")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DescricaoProd")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("FuncionarioID")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("PrecoProd")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("ProdutoID")
-                        .HasColumnType("int");
-
-                    b.HasKey("VendaID");
-
-                    b.ToTable("Venda");
                 });
 #pragma warning restore 612, 618
         }

@@ -16,5 +16,10 @@ namespace Orange_Beauty.Data
 
         public DbSet<Orange_Beauty.Models.Funcionario> Funcionario { get; set; } = default!;
         public DbSet<Orange_Beauty.Models.Cliente> Cliente { get; set; } = default!;
+        public DbSet<Orange_Beauty.Models.Produto> Produto { get; set; } = default!;
+        public DbSet<Orange_Beauty.Models.NivelAcesso> NivelAcesso { get; set; } = default!;
+        public DbSet<Orange_Beauty.Models.Status> Status { get; set; } = default!;
+        public DbSet<Orange_Beauty.Models.Categoria> Categoria { get; set; } = default!;
+        public DbSet<Orange_Beauty.Models.Venda> Venda { get; set; } = default!;
     }
 }
