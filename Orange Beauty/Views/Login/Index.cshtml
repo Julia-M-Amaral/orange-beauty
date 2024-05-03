@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/login.css">
+
+    <title>Login</title>
+</head>
+<body>
+    </nav>
+
+    <div class="half mt-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-6">
+                    <div class="form-block">
+                        <div class="text-center mb-5">
+                            <span>
+                                <img src="img/OrangeBeauty-Logo.png" width="170" height="170">
+                            </span>
+                        </div>
+                        <form action="#" method="post">
+                            <div class="form-group first">
+                                <label for="username">E-mail</label>
+                                <input type="text" class="form-control" placeholder="seu-email@gmail.com" id="username">
+                            </div>
+                            <br />
+                            <div class="form-group last mb-3">
+                                <label for="password">Senha</label>
+                                <input type="password" class="form-control" placeholder="Sua Senha" id="password">
+                            </div>
+                            <br />
+
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <input type="submit" value="Administrador" class="btn btn-primary" asp-area="" asp-controller="Administrador" asp-action="Index">
+                                </div>
+                                <div class="col-auto">
+                                    <input type="submit" value="Colaborador" class="btn btn-primary" asp-area="" asp-controller="Colaborador" asp-action="Index">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
