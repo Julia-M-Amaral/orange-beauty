@@ -15,5 +15,6 @@ namespace Orange_Beauty.Data
         }
 
         public DbSet<Orange_Beauty.Models.Funcionario> Funcionario { get; set; } = default!;
+        public DbSet<Orange_Beauty.Models.Cliente> Cliente { get; set; } = default!;
     }
 }
