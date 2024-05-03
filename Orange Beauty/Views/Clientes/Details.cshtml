@@ -1,13 +1,18 @@
 ﻿@model Orange_Beauty.Models.Cliente
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes";
 }
 
-<h1>Details</h1>
+<br />
+
+<a type="button" class="btn btn-primary" href="~/Colaborador/Index">Voltar</a>
+
+<br />
+<br />
 
 <div>
-    <h4>Cliente</h4>
+    <h4>Detalhes</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -73,6 +78,5 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.ClienteID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
 </div>

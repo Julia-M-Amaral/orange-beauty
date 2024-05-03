@@ -1,14 +1,18 @@
 ﻿@model IEnumerable<Orange_Beauty.Models.Venda>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista Vendas";
 }
+<br />
 
-<h1>Index</h1>
+<a type="button" class="btn btn-primary" href="~/Colaborador/Index">Voltar</a>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<br />
+<br />
+<h1 class="text-center">Lista de Vendas</h1>
+<br />
+<br />
+
 <table class="table">
     <thead>
         <tr>
@@ -54,11 +58,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DescricaoProd)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.VendaID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.VendaID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.VendaID">Delete</a>
-            </td>
+                <td>
+                    <a type="button" class="btn btn-primary" asp-action="Edit" asp-route-id="@item.VendaID">Editar</a>
+                    <a type="button" class="btn btn-info" asp-action="Details" asp-route-id="@item.VendaID">Detalhes</a>
+                    <a type="button" class="btn btn-danger" asp-action="Delete" asp-route-id="@item.VendaID">Apagar</a>
+                </td>
         </tr>
 }
     </tbody>

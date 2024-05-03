@@ -1,14 +1,19 @@
 ﻿@model Orange_Beauty.Models.NivelAcesso
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Excluir Nível de Acesso";
 }
 
-<h1>Delete</h1>
+<br />
 
-<h3>Are you sure you want to delete this?</h3>
+<a type="button" class="btn btn-primary" href="~/Administrador/Index">Voltar</a>
+
+<br />
+<br />
+
+<h4>Apagar Nível de Acesso</h4>
+
 <div>
-    <h4>NivelAcesso</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -21,7 +26,6 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="NivelAcessoID" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Apagar" class="btn btn-danger" />
     </form>
 </div>

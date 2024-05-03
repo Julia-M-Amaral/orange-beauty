@@ -1,14 +1,18 @@
 ﻿@model Orange_Beauty.Models.Venda
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Venda";
 }
 
-<h1>Edit</h1>
+<br />
 
-<h4>Venda</h4>
+<a type="button" class="btn btn-primary" href="~/Colaborador/Index">Voltar</a>
+
+<br />
+<br />
+
+<h4>Editar Venda</h4>
 <hr />
-<div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -43,16 +47,15 @@
                 <input asp-for="DescricaoProd" class="form-control" />
                 <span asp-validation-for="DescricaoProd" class="text-danger"></span>
             </div>
+        <br />
+
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Editar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

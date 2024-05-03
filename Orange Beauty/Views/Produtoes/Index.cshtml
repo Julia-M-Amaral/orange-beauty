@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Orange_Beauty.Models.Produto>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista Produtos";
 }
 <br />
 
@@ -58,11 +58,8 @@
                 </td>
                 <td>
                     <a type="button" class="btn btn-primary" asp-action="Edit" asp-route-id="@item.ProdutoID">Editar</a>
-                    <!--                <a asp-action="Edit" asp-route-id="@item.ProdutoID">Edit</a> |
-                    -->
                     <a type="button" class="btn btn-info" asp-action="Details" asp-route-id="@item.ProdutoID">Detalhes</a>
                     <a type="button" class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ProdutoID">Apagar</a>
-
                 </td>
             </tr>
         }

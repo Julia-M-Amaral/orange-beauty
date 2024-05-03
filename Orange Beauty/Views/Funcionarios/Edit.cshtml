@@ -1,12 +1,17 @@
 ﻿@model Orange_Beauty.Models.Funcionario
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Funcionário";
 }
 
-<h1>Edit</h1>
+<br />
 
-<h4>Funcionario</h4>
+<a type="button" class="btn btn-primary" href="~/Administrador/Index">Voltar</a>
+
+<br />
+<br />
+
+<h4>Editar Funcionário</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -78,15 +83,13 @@
                 <input asp-for="StatusID" class="form-control" />
                 <span asp-validation-for="StatusID" class="text-danger"></span>
             </div>
+            <br />
+
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Editar" class="btn btn-primary" />
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
