@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Orange_Beauty.Models.Funcionario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeFunc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailFunc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPFFunc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DNFunc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogradouroFunc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComplementoFunc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CEPFunc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CidadeFunc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoFunc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Senha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NivelAcesso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DtCadastroFunc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeFunc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailFunc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPFFunc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DNFunc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogradouroFunc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComplementoFunc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEPFunc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CidadeFunc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoFunc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Senha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NivelAcesso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DtCadastroFunc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FuncionarioID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FuncionarioID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FuncionarioID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
