@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orange Beauty", "Orange Beauty\Orange Beauty.csproj", "{8817B32C-BCEC-4F85-B76D-5C3F148F6723}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OrangeBeauty", "OrangeBeauty", "{469D610A-5676-4B20-8334-A76624E7EF31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8817B32C-BCEC-4F85-B76D-5C3F148F6723} = {469D610A-5676-4B20-8334-A76624E7EF31}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {62AF0239-DF29-4D45-AEB0-8725E291C685}
